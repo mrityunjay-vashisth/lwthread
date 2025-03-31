@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">LWThread Architecture</text>
+  
+  <!-- OS Layer -->
+  <rect x="50" y="500" width="700" height="60" fill="#d1e7dd" stroke="#198754" stroke-width="2" rx="5" />
+  <text x="400" y="535" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Operating System (Linux/Unix)</text>
+  
+  <!-- OS Threads -->
+  <rect x="100" y="420" width="110" height="50" fill="#e6f0eb" stroke="#198754" stroke-width="2" rx="5" />
+  <text x="155" y="448" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">OS Thread 1</text>
+  
+  <rect x="230" y="420" width="110" height="50" fill="#e6f0eb" stroke="#198754" stroke-width="2" rx="5" />
+  <text x="285" y="448" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">OS Thread 2</text>
+  
+  <rect x="460" y="420" width="110" height="50" fill="#e6f0eb" stroke="#198754" stroke-width="2" rx="5" />
+  <text x="515" y="448" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">OS Thread N</text>
+  
+  <!-- Ellipses for threads -->
+  <text x="400" y="448" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">...</text>
+  
+  <!-- Scheduler -->
+  <rect x="200" y="320" width="400" height="60" fill="#cfe2ff" stroke="#0d6efd" stroke-width="2" rx="5" />
+  <text x="400" y="355" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Scheduler (lwt_scheduler_t)</text>
+  
+  <!-- Thread Queue -->
+  <rect x="50" y="220" width="200" height="60" fill="#fff3cd" stroke="#ffc107" stroke-width="2" rx="5" />
+  <text x="150" y="255" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Thread Queue</text>
+  
+  <!-- Thread States -->
+  <rect x="550" y="220" width="200" height="60" fill="#fff3cd" stroke="#ffc107" stroke-width="2" rx="5" />
+  <text x="650" y="255" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Thread States</text>
+  
+  <!-- Lightweight Threads -->
+  <rect x="100" y="120" width="90" height="50" fill="#f8d7da" stroke="#dc3545" stroke-width="2" rx="5" />
+  <text x="145" y="148" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">LWThread 1</text>
+  
+  <rect x="210" y="120" width="90" height="50" fill="#f8d7da" stroke="#dc3545" stroke-width="2" rx="5" />
+  <text x="255" y="148" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">LWThread 2</text>
+  
+  <rect x="320" y="120" width="90" height="50" fill="#f8d7da" stroke="#dc3545" stroke-width="2" rx="5" />
+  <text x="365" y="148" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">LWThread 3</text>
+  
+  <rect x="430" y="120" width="90" height="50" fill="#f8d7da" stroke="#dc3545" stroke-width="2" rx="5" />
+  <text x="475" y="148" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">LWThread 4</text>
+  
+  <rect x="540" y="120" width="90" height="50" fill="#f8d7da" stroke="#dc3545" stroke-width="2" rx="5" />
+  <text x="585" y="148" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">LWThread 5</text>
+  
+  <rect x="650" y="120" width="90" height="50" fill="#f8d7da" stroke="#dc3545" stroke-width="2" rx="5" />
+  <text x="695" y="148" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">LWThread M</text>
+  
+  <!-- Application Layer -->
+  <rect x="50" y="50" width="700" height="40" fill="#d1ecf1" stroke="#0dcaf0" stroke-width="2" rx="5" />
+  <text x="400" y="75" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Application Code</text>
+  
+  <!-- Connections -->
+  <!-- Application to LWThreads -->
+  <path d="M 400 90 L 400 110" stroke="#333" stroke-width="2" fill="none" />
+  <polygon points="400,120 395,110 405,110" fill="#333" />
+  
+  <!-- LWThreads to Thread Queue -->
+  <path d="M 145 170 L 145 210" stroke="#333" stroke-width="2" fill="none" />
+  <polygon points="145,220 140,210 150,210" fill="#333" />
+  
+  <!-- Thread Queue to Scheduler -->
+  <path d="M 150 280 L 150 320 L 200 320" stroke="#333" stroke-width="2" fill="none" />
+  <polygon points="200,330 190,325 190,315" fill="#333" />
+  
+  <!-- Thread States to Scheduler -->
+  <path d="M 650 280 L 650 320 L 600 320" stroke="#333" stroke-width="2" fill="none" />
+  <polygon points="600,330 610,325 610,315" fill="#333" />
+  
+  <!-- Scheduler to OS Threads -->
+  <path d="M 250 380 L 250 410" stroke="#333" stroke-width="2" fill="none" />
+  <polygon points="250,420 245,410 255,410" fill="#333" />
+  
+  <path d="M 400 380 L 400 410" stroke="#333" stroke-width="2" fill="none" />
+  <polygon points="400,420 395,410 405,410" fill="#333" />
+  
+  <path d="M 550 380 L 550 410" stroke="#333" stroke-width="2" fill="none" />
+  <polygon points="550,420 545,410 555,410" fill="#333" />
+  
+  <!-- OS Threads to OS -->
+  <path d="M 155 470 L 155 490" stroke="#333" stroke-width="2" fill="none" />
+  <polygon points="155,500 150,490 160,490" fill="#333" />
+  
+  <path d="M 285 470 L 285 490" stroke="#333" stroke-width="2" fill="none" />
+  <polygon points="285,500 280,490 290,490" fill="#333" />
+  
+  <path d="M 515 470 L 515 490" stroke="#333" stroke-width="2" fill="none" />
+  <polygon points="515,500 510,490 520,490" fill="#333" />
+  
+  <!-- Legend -->
+  <rect x="50" y="570" width="20" height="10" fill="#d1ecf1" stroke="#0dcaf0" stroke-width="2" />
+  <text x="75" y="579" font-family="Arial" font-size="12">Application Layer</text>
+  
+  <rect x="200" y="570" width="20" height="10" fill="#f8d7da" stroke="#dc3545" stroke-width="2" />
+  <text x="225" y="579" font-family="Arial" font-size="12">Lightweight Threads</text>
+  
+  <rect x="375" y="570" width="20" height="10" fill="#fff3cd" stroke="#ffc107" stroke-width="2" />
+  <text x="400" y="579" font-family="Arial" font-size="12">Thread Management</text>
+  
+  <rect x="550" y="570" width="20" height="10" fill="#cfe2ff" stroke="#0d6efd" stroke-width="2" />
+  <text x="575" y="579" font-family="Arial" font-size="12">Scheduler</text>
+  
+  <rect x="650" y="570" width="20" height="10" fill="#e6f0eb" stroke="#198754" stroke-width="2" />
+  <text x="675" y="579" font-family="Arial" font-size="12">OS Layer</text>
+  
+  <!-- Thread State Details -->
+  <rect x="560" y="160" width="180" height="25" fill="#fff3cd" stroke="#ffc107" stroke-width="1" rx="2" />
+  <text x="650" y="177" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">NEW → READY → RUNNING</text>
+  
+  <rect x="560" y="185" width="180" height="25" fill="#fff3cd" stroke="#ffc107" stroke-width="1" rx="2" />
+  <text x="650" y="202" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">BLOCKED ← FINISHED</text>
+  
+  <!-- Thread Queue Details -->
+  <rect x="60" y="180" width="180" height="30" fill="#fff3cd" stroke="#ffc107" stroke-width="1" rx="2" />
+  <text x="150" y="198" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">head → ... → tail</text>
+</svg>

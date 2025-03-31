@@ -137,9 +137,7 @@ LWThread uses an M:N threading model where M user-space threads (lightweight thr
 3. **Worker Threads**: OS threads that execute the lightweight threads
 4. **Context Switching**: Uses `ucontext.h` for saving and restoring execution state
 
-<p align="center">
-  <img src="docs/images/architecture.png" alt="LWThread Architecture" width="600"/>
-</p>
+![LWThread Architecture](docs/images/architecture.svg)
 
 ## Developer Guide
 
