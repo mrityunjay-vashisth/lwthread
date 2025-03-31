@@ -1,0 +1,31 @@
+# VS Code files
+.vscode/
+
+# VS Code extension generated files
+*.code-workspace
+.history/
+
+# Local history may be stored outside .vscode
+.history
+.ionide
+
+# Optional: Common build outputs
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# Optional: Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Optional: Build directories
+build/
+dist/
+bin/
