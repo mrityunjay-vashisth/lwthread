@@ -1,7 +1,5 @@
 # LWThread - Lightweight Threading Library
 
-<img src="docs/images/lwthread_logo.png" alt="LWThread Logo" width="200" align="right"/>
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 [![Version](https://img.shields.io/badge/version-0.1.0-orange.svg)]()
